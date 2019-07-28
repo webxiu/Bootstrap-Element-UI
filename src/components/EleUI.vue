@@ -104,11 +104,11 @@ export default {
     }
   },
   mounted() {
-    axios("/static/wallet.json").then(res => {
-      this.pay_bank = res.data.pay_bank;
+    let data = JSON.parse(localStorage.getItem("datas"));
+    if (data.pay_bank) {
+      this.pay_bank = data.pay_bank;
       this.getData();
-      console.log(res.data);
-    });
+    }
   }
 };
 </script>

@@ -1,6 +1,5 @@
 <template>
-   <div class="container">
-
+  <div class="container">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -17,16 +16,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" @click="resFile">数据 ˙</a>
+          <a class="navbar-brand" href="#" @click="$router.push('/')">数据 ˙</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="">
-            <!-- <li class="active"> -->
+            <li class @click="$router.push('/table')">
+              <!-- <li class="active"> -->
               <a href="#">
-                Link
+                表格 ˙
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -70,7 +69,7 @@
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search" />
             </div>
-            <button type="submit" class="btn btn-default" @click.prevent="abc">Submit</button>
+            <button type="submit" class="btn btn-default" @click.prevent="submit">Submit</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
             <li>
@@ -119,33 +118,35 @@ export default {
   name: "Header",
   data() {
     return {
-      
+      imgs: []
     };
   },
   methods: {
-    resFile() {
+    getData() {
       axios("../../static/test.json").then(res => {
-        this.$message({
-          type:'success',
-          message:'已获取本地json数据,请控制台查看'
-        })
-        this.$router.push('/');
-        console.log(res);
+        this.imgs = res.data;
+      });
+
+      axios("/static/wallet.json").then(res => {
+        this.pay_bank = res.data.pay_bank;
+        localStorage.setItem("data", JSON.stringify(res.data));
       });
     },
-    
-    abc() {
-      console.log("abc....");
-    },
-    
-    
+    submit() {
+      console.log("图片数据", this.imgs);
+      console.log("表格数据", JSON.parse(localStorage.getItem("data")));
+
+      this.$message({
+        type: "success",
+        message: "已获取本地json数据,请控制台查看"
+      });
+    }
   },
-  mounted(){
-    
+  mounted() {
+    this.getData();
   }
 };
 </script>
 
 <style scoped>
-
 </style>

@@ -1,0 +1,73 @@
+{
+    "username": "test123", 
+    "realname": "", 
+    "last_login_time": "2019-07-28 01:01:30",
+    "msg": "",
+    "pay_bank": [
+        {
+            "bank_id": 0,"name":"微信支付","bank_url": "../static/img/way_2.png",
+            "bank_list":[
+                {"title":"微信支付111","code_id":11000},
+                {"title":"微信支付22222","code_id":11001}
+            ]
+        },
+        {
+            "bank_id": 1,"name":"银联支付","bank_url": "../static/img/way_3.png",
+            "bank_list":[
+                {"title":"银联支付11111","code_id":21000},
+                {"title":"银联支付2222222","code_id":21001},
+                {"title":"银联支付2222222","code_id":21002},
+                {"title":"银联支付2222222","code_id":21003},
+                {"title":"银联支付2222222","code_id":21004},
+                {"title":"银联支付2222222","code_id":21005},
+                {"title":"银联支付2222222","code_id":21006}
+            ]
+        },
+        {
+            "bank_id": 2,"name":"支付宝","bank_url": "../static/img/way_4.png",
+            "bank_list":[
+                {"title":"支付宝1111111","code_id":36001},
+                {"title":"支付宝2222222","code_id":36002}
+            ]   
+        },
+        {
+            "bank_id": 3,"name":"京东钱包","bank_url": "../static/img/way_3.png",
+            "bank_list":[
+                {"title":"京东钱包1111111","code_id":40001},
+                {"title":"京东钱包2222222","code_id":40002}
+            ]   
+        },
+        {
+            "bank_id": 4,"name":"银联","bank_url": "../static/img/way_4.png",
+            "bank_list":[
+                {"title":"银联1111111","code_id":53001},
+                {"title":"银联2222222","code_id":53002}
+            ]   
+        }
+    ],
+    "bettingMoney": [
+        {"partner_id": 1, "partner_name": "FG电子", "bet_amount": "0.00"},
+        {"partner_id": 2, "partner_name": "HB电子", "bet_amount": "0.00"},
+        {"partner_id": 3, "partner_name": "MW电子", "bet_amount": "0.00"},
+        {"partner_id": 4, "partner_name": "MG电子", "bet_amount": "0.00"},
+        {"partner_id": 7, "partner_name": "OG视讯", "bet_amount": "0.00"},
+        {"partner_id": 8, "partner_name": "沙巴体育", "bet_amount": "0.00"},
+        {"partner_id": 9, "partner_name": "LEBO视讯", "bet_amount": "0.00"},
+        {"partner_id": 11, "partner_name": "BNG电子", "bet_amount": "0.00"},
+        {"partner_id": 12, "partner_name": "BG视讯", "bet_amount": "0.00"},
+        {"partner_id": 13, "partner_name": "开元棋牌", "bet_amount": "0.00"},
+        {"partner_id": 14, "partner_name": "LEG棋牌", "bet_amount": "0.00"},
+        {"partner_id": 15, "partner_name": "HC体育", "bet_amount": "0.00"},
+        {"partner_id": 17, "partner_name": "SG电子", "bet_amount": "0.00"},
+        {"partner_id": 18, "partner_name": "eBET视讯", "bet_amount": "0.00"},
+        {"partner_id": 16, "partner_name": "AG电子", "bet_amount": "0.00"},
+        {"partner_id": 16, "partner_name": "AG视讯", "bet_amount": "0.00"},
+        {"partner_id": 20, "partner_name": "HC彩票", "bet_amount": "0.00"},
+        {"partner_id": 21, "partner_name": "PT电子", "bet_amount": "0.00"},
+        {"partner_id": 22, "partner_name": "爱棋牌", "bet_amount": "0.00"},
+        {"partner_id": 23, "partner_name": "AVIA电竞", "bet_amount": "0.00"},
+        {"partner_id": 19, "partner_name": "BB电子", "bet_amount": "0.00"},
+        {"partner_id": 19, "partner_name": "BB视讯", "bet_amount": "0.00"},
+        {"partner_id": 19, "partner_name": "BB彩票", "bet_amount": "0.00"}
+    ]
+}

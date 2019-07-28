@@ -2,7 +2,7 @@
   <div class="container">
     <table style="border:1px solid #333;">
       <tr>
-        <td colspan="3">6666</td>
+        <td colspan="3">钱包数据表</td>
       </tr>
       <tr v-for="(childArr,index) in tableData" :key="index">
         <td v-for="(item,i) in childArr" :key="i">
@@ -37,17 +37,17 @@ export default {
       }
       return res;
     },
-    refresh(index,id){
+    refresh(index){
       this.show = true;
       this.bet[index].bet_amount = '';
       this.tableData = this.dataFomate(this.bet,3);
       this.$message({
         type:'success',
-        message:'刷新成功,正在获取最新数据...'
+        message:'刷新成功,当前结果为模拟数据...'
       })
       setTimeout(()=>{
         //发送单个请求
-        this.bet[index].bet_amount = '0.99';
+        this.bet[index].bet_amount = '52.00';
         this.tableData = this.dataFomate(this.bet,3);
         console.log('单个请求结果:',this.tableData);
         this.show = false;
@@ -60,7 +60,6 @@ export default {
     let data = JSON.parse(localStorage.getItem("data"));
     this.bet = data.bettingMoney;
     if (this.bet) {
-      console.log("表格", this.bet);
       this.tableData = this.dataFomate(this.bet,3);
       console.log("表格", this.tableData);
     }

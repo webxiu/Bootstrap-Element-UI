@@ -72,7 +72,7 @@
             <button type="submit" class="btn btn-default" @click.prevent="submit">Submit</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-            <li>
+            <li @click="$router.push('/xunhuan')">
               <a href="#">Link</a>
             </li>
             <li class="dropdown">
